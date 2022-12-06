@@ -27,7 +27,7 @@ class Solution(TextSolution):
     # def part_2(self) -> int:
     #     pass
 
-    # @answer((1234, 4567))
+    @answer(("CNSZFDVLJ", "QNDWLMGNS"))
     def solve(self) -> Tuple[int, int]:
         crates, instructions = self.input.split("\n\n")
         instructions = instructions.split("\n")
@@ -48,7 +48,7 @@ class Solution(TextSolution):
                     moves=int(tokens[1]), before=int(tokens[3]), after=int(tokens[5])
                 )
             )
-        stack2 = deepcopy(stacks)
+        stack2 = deepcopy(stacks)  # Copy before we change the stack
         for step in steps:
             to_move = []
             for move in range(step.moves):
