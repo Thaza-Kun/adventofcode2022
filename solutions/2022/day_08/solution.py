@@ -38,7 +38,7 @@ class Solution(StrSplitSolution):
                             visible_trees += 1
         return visible_trees
 
-    # @answer(1234)
+    @answer(470596)
     def part_2(self) -> int:
         grid: List[str] = self.input
         grid_T: List[str] = list(zip(*grid))  # Transpose grid
